@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  <script src="script.js"></script>
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar start -->
+<div class="container">  
+  <nav>
+    <div class="left-side">
+      <div class="step">
+        <div class="steps"><button class="btn btn1">1</button>
+          <div><p class="info">Step 1</p>
+            <h3>Your info</h3></div>
+        </div>
+        <div class="steps"><button class="btn btn2">2</button>
+          <div><p class="info">Step 2</p>
+            <h3>Select plan</h3></div>
+        </div>
+        <div class="steps"><button class="btn btn3">3</button>
+          <div><p class="info">Step 3</p>
+            <h3>Add-ons</h3></div>
+        </div>
+        <div class="steps"><button class="btn btn4">4</button>
+          <div><p class="info">Step 4</p>
+            <h3>Summary</h3></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sidebar end -->
+
+  <!-- Step 1 start -->
+
+  <main>
+    <div class="right-side">
+      <h1>Personal info</h1>
+      <p class="billing">Please provide your name, email address, and phone number.</p>
+
+      <form action="" onsubmit="validateForm(); return false">
+
+        <label for="fname" style="margin-left: 15px;">Name</label><br>
+        <input type="text" class="personal fname" id="fname" placeholder="e.g. Stephen King">
+        <p class="redline fname1">This field is required</p>
+        <br>
+        <label for="email" style="margin-left: 15px;">Email Address</label><br>
+        <input type="email" class="personal email" id="email" placeholder="e.g. stephenking@lorem.com">
+        <p class="redline email1">This field is required</p>
+        <br>
+        <label for="p_num" style="margin-left: 15px;">Phone Number</label><br>
+        <input type="tel" class="personal p_num" id="p_num" placeholder="e.g. +1 234 567 890">
+        <p class="redline p_num1">This field is required</p>
+        <br>
+        <input type="submit" class="nextbtn" id="nextbtn" value="Next Step">
+        <br>
+
+      </form>
+    </div>
+    <!-- Step 1 end -->
+
+  <!-- Step 2 start -->
+  <div class= "right-side2">
+      <h1>Select your plan</h1>
+      <p class="billing">You have the option of monthly or yearly billing.</p>
+      <input type="hidden" name="hidden" class="hidden">
+      <div class="bill-buttons">
+        <button class="bill-button btn21" onclick="setvalue1()" >
+          <img src="./assets/images/icon-arcade.svg" alt="icon-arcade">
+          <div>
+            <h4>Arcade</h4>
+            <p class="yr1">$9/mo</p>
+            <p class="free">2 months free</p>
+          </div>
+        </button>
+        <button class="bill-button btn22" onclick="setvalue2()">
+          <img src="./assets/images/icon-advanced.svg" alt="icon-advanced">
+          <div>
+            <h4>Advanced</h4>
+            <p class="yr2">$12/mo</p>
+            <p class="free twelve">2 months free</p>
+          </div>
+        </button>
+        <button class="bill-button btn23" onclick="setvalue3()">
+          <img src="./assets/images/icon-pro.svg" alt="icon-pro">
+          <div>
+            <h4>Pro</h4>
+            <p class="yr3">$15/mo</p>
+            <p class="free fifteen">2 months free</p>
+          </div>
+        </button>
+      </div>
+      <div class="plan1">
+      <div class="checker-text one">Monthly</div>
+      <label for="switch" class="switch">
+      <input type="checkbox" class="checkbox" id="switch" onclick="unchecked(); checkedFunc()">
+      <span class="slider round"></span>
+      </label>
+      <div class="checker-text two">Yearly</div>
+      </div>
+    <div class="button2">
+      <button class="backbtn" onclick="gobackFunc()">Go back</button>
+      <button class="nextbtn2" onclick="gotopage3()">Next Step</button>
+    </div>
+  </div>
+
+  <!-- Step 2 end -->
+
+  <!-- Step 3 start -->
+  <div class="right-side3">
+    <h1>Pick add-ons</h1>
+    <p class="billing">Add-ons help enhance your gaming experience.</p>
+      <div class="label">
+        <input type="checkbox" name="online-service" id="online" class="triplecheck">
+        <label for="online" class="triplelabel">Online service<p class="description">Access to multiplayer games<span class="pickyr1">+$1/mo</span></p></label><br>
+      </div>
+      <div class="label">
+        <input type="checkbox" name="larger-storge" id="larger" class="triplecheck">
+        <label for="larger" class="triplelabel">Larger storage<p class="description">Extra 1TB of cloud save<span class="pickyr2">+$2/mo</span></p></label><br>
+      </div>
+      <div class="label">
+        <input type="checkbox" name="customizable-profile" id="custom" class="triplecheck">
+        <label for="custom" class="triplelabel">Customizable profile <p class="description">Custom theme on your profile<span class="pickyr3">+$2/mo</span></p></label><br>
+      </div>
+      <div class="button2">
+        <button class="backbtn" onclick="gobackFunc2()">Go back</button>
+        <button class="nextbtn2" onclick="uncheckedFunc(); gotopage4()">Next Step</button>
+      </div>
+  </div>
+  <!-- Step 3 end -->
+
+  <!-- Step 4 start -->
+  <div class="right-side4">
+    <h1> Finishing up</h1>
+    <p class="billing">Double-check everything looks OK before confirming.</p>
+    <!-- Dynamically add subscription and add-on selections here -->
+    <div class="finish">
+      <h4 id="bill-button">Arcade</h4><h4 class="price">$9/mo</h4>
+      <p style="text-decoration: underline; font-size: 12px;" onclick="change()">Change</p>
+      <hr style="font-size: 12px; margin-bottom: 30px; margin-left: 30px;">
+      <div class="addons">
+        <p class="addon1"></p><span class="addon-price1"></span><br>
+        <p class="addon2"></p><span class="addon-price2"></span><br>
+        <p class="addon3"></p><span class="addon-price3"></span><br>
+      </div>
+    </div>
+    <p style="margin-right: 90px;">Total (per month/year)</p><span class="totalprice"></span>
+    <div class="button2">
+      <button class="backbtn" onclick="gobackFunc3()">Go back</button>
+      <button class="nextbtn2" onclick="confirm()">Confirm</button>
+    </div>
+    </div>
+     <!-- Step 4 end -->
+    <!-- Step 5 start -->
+    <div class="right-side5">
+      <img src="./assets/images/icon-thank-you.svg" alt="icon-thank-you">
+      <h1>Thank you!</h1>
+      <p>
+      Thanks for confirming your subscription! We hope you have fun 
+      using our platform. If you ever need support, please feel free 
+      to email us at support@loremgaming.com.
+      </p>
+    </div>
+    <!-- Step 5 end -->
+
+  </main>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Gglovie">Grace Njah</a>.
+  </div>
+</body>
+</html>

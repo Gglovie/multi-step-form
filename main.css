@@ -1,0 +1,506 @@
+@font-face {
+    font-family: myfont;
+    src: url(./assets/fonts/Ubuntu-Medium.ttf);
+}
+:root{
+    --Coolgray: hsl(231, 11%, 63%);
+    --Lightgray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+
+    --Marineblue: hsl(213, 96%, 18%);
+    --Purplishblue: hsl(243, 100%, 62%);
+    --Pastelblue: hsl(228, 100%, 84%);
+    --Lightblue: hsl(206, 94%, 87%);
+    --Strawberryred: hsl(354, 84%, 57%);
+
+}
+body{
+    margin: 0;
+    background-color: var(--Lightblue);
+}
+
+.container{
+    color: var(--Marineblue);
+    background-color: var(--White);
+    font-family: myfont;
+    font-size: 16px;
+    border-radius: 10px;
+    margin: 5rem 10rem;
+    padding: 1rem;
+    display: grid;
+    align-self: center;
+    grid-template-columns: 1fr 2fr;
+    cursor: pointer;
+}
+.right-side{
+    margin-left: 60px;
+    padding: 0 5rem 0 0;
+    display: block;
+}
+.right-side2{
+    margin-left: 60px;
+    display: none;
+}
+.right-side3{
+    margin-left: 60px;
+    display: none;
+}
+.right-side4{
+    margin-left: 60px;
+    display: none;
+}
+.right-side5{
+    margin-left: 60px;
+    display: none;
+    text-align: center;
+    margin-right: 80px;
+    margin-top: 25%;
+}
+h1{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.personal{
+    display: flex;
+    float: right;
+    padding: 15px;
+    width: 90%;
+    border-color: var(--Lightgray);
+    border-radius: 5px;
+    font-family: myfont;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+input:hover{
+    border-color: var(--Purplishblue);
+}
+.nextbtn{
+    width: 7rem;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: myfont;
+    font-size: 16px;
+    background-color: var(--Marineblue);
+    color: var(--Alabaster);
+    margin-top: 45px;
+    display: flex;
+    float: right;
+    cursor: pointer;
+}
+.steps{
+    display: flex;
+}
+.btn{
+    color: var(--White);
+    border-color: var(--White);
+    background-color: transparent;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    font-family: myfont;
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 10px 0 20px;
+    cursor: pointer;
+}
+.btn1{
+    color: var(--Marineblue);
+    background-color: var(--Lightblue);
+}
+h3{
+    letter-spacing: 2px;
+    color: var(--White);
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 16px;
+}
+.info{
+    color: var(--Coolgray);
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 16px;
+    margin-top: 30px;
+}
+.left-side{
+    width: 100%;
+    height: 100%;
+    background-image:url(./assets/images/bg-sidebar-desktop.svg) ;
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-height: 570px;
+}
+.redline{
+    font-size: small;
+    color: transparent;
+    text-align: right;
+    padding: 0;
+    margin: 0 10px;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 19px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Marineblue);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--Alabaster);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider::before{
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    cursor: pointer;
+}
+.slider.round{
+    border-radius: 17px;
+}
+.slider.round::before{
+    border-radius: 50%;
+}
+.billing{
+    color: var(--Coolgray);
+    margin-left: -5px;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+.bill-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-right: 70px;
+}
+button{
+    text-align: left;
+    margin-right: 15px;
+    border-radius: 10px;
+    border: 1px solid var(--Coolgray);
+    background-color: transparent;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+img{
+    margin: 10px;
+}
+h4{
+    padding: 30px 0 0 10px;
+    color: var(--Marineblue);
+    font-size: 16px;
+}
+.bill-button:hover{
+    border: 1px solid var(--Purplishblue);
+}
+.bill-button:focus{
+    background-color: var(--Lightblue);
+    border: 1px solid var(--Purplishblue);
+    cursor: pointer;
+}
+p{
+    color: var(--Coolgray);
+    padding-top: -20px;
+    padding-left: 10px;
+    margin-top: -10px;
+    font-family: myfont;
+}
+.plan1{
+    padding: 12px;
+    display: flex;
+    background-color: var(--Lightblue);
+    border-radius: 10px;
+    font-size: 15px;
+    color: var(--Coolgray);
+    text-align: center;
+    margin-right: 70px;
+
+}
+.one{
+    margin-left: auto;
+    color: var(--Marineblue);
+}
+.two{
+    margin-right: auto;
+}
+.button2{
+    margin-top: 45px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+.nextbtn2{
+    width: 8rem;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: myfont;
+    font-size: 16px;
+    background-color: var(--Marineblue);
+    color: var(--Alabaster);
+    margin-top: 75px;
+    margin-bottom: -10px;
+    margin-right: 70px;
+    white-space: nowrap;
+}
+.backbtn{
+    width: 6rem;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: myfont;
+    font-size: 16px;
+    margin-bottom: -10px;
+    background-color: transparent;
+    color: var(--Coolgray);
+    margin-top: 75px;
+    border: none;
+    white-space: nowrap;
+}
+.free{
+    color: var(--Marineblue);
+    font-size: 12px;
+    display: none;
+}
+.label{
+    width: 80%;
+    border: 1px solid var(--Coolgray);
+    border-radius: 10px;
+    margin-top: 15px;
+    padding: 0 15px;
+    padding-top: 10px;
+    margin-right: 20px;
+}
+.label:hover{
+    border-color: var(--Purplishblue);
+}
+.description{
+    margin-top: 5px ;
+    margin-left: 30px;
+    margin-bottom: 0px;
+    font-size: 15px;
+}
+p span{
+    position: relative;
+    bottom: 10px;
+    float: right;
+    color: var(--Purplishblue);
+    font-size: 16px;
+}
+input.triplecheck{
+    width: 20px;
+    height: 20px;
+    top: 15px;
+    position: relative;
+    margin-right: 10px;
+}
+input[type=checkbox]:checked{
+    accent-color: var(--Purplishblue);
+}
+.triplelabel{
+    padding-top: 10px;
+}
+.finish{
+    width: 80%;
+    background-color: var(--Magnolia);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+#bill-button{
+    padding: 0 0 0 10px;
+}
+.price{
+    position: relative;
+    float: right;
+    color: var(--Marineblue);
+    margin: 0;
+    padding: 0;
+    bottom: 20px;
+}
+.addon1,.addon2,.addon3{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.addon-price1, .addon-price2, .addon-price3{
+    font-size: 15px;
+    float: right;
+    position: relative;
+    margin-top: -20px;
+}
+.totalprice{
+    font-size: 16px;
+    float: right;
+    position: relative;
+    margin-top: -30px;
+    margin-right: 90px;
+    color: var(--Purplishblue);
+}
+
+
+@media screen and (max-width: 1000px) {
+    .container{
+        color: var(--Marineblue);
+        background-color: var(--Lightblue);
+        font-family: myfont;
+        font-size: 16px;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        display: block;
+        cursor: pointer;
+    }
+    .left-side{
+        width: 100%;
+        background-image: url(./assets/images/bg-sidebar-mobile.svg);
+        position: relative;
+        background-size: 100%;
+        text-align: center;
+        margin-bottom: 200px;
+
+    }
+    .step{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-left: 20%;
+
+    }
+    .btn{
+        margin-left: 5px;
+    }
+    .info{
+        display: none;
+    }
+    h3{
+        display: none;
+    }
+    main{
+        width: 90%;
+        position: absolute;
+        top: 4%;
+        border-radius: 10px;
+        margin-top: 100px;
+        z-index: 1;
+        margin-right: auto;
+        margin-left: 5%;
+    }
+    .right-side3, .right-side, .right-side2, .right-side4, .right-side5{
+        background-color: var(--White);
+        padding: 0;
+        margin: 0;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 1px black;
+    }
+    .label{
+        width: 90%;
+    }
+    .billing{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .bill-buttons{
+        display: block;
+        margin-right: 0;
+    }
+    .bill-button{
+        display: flex;
+        width: 100%;
+        padding: 0 15px;
+        padding-top: 10px;
+        margin-right: 20px;
+    }
+    .finish{
+        width: 90%;
+    }
+    .totalprice{
+        text-align: right;
+        position: relative;
+        float: right;
+        margin-right: 5%;
+    }
+    p span{
+        text-align: right;
+        position: relative;
+        float: right;
+        margin-left: 100%;
+        bottom: 0;
+    }
+    .triplelabel{
+        margin-right: 20% ;
+    }
+    button p{
+        position: absolute;
+    }
+    h4{
+        margin-bottom: 10px;
+        margin-top: -25px;
+    }
+    .free{
+        margin-top: 5px;
+    }
+    .plan1{
+        width: 90%;
+        padding: 12px;
+        display: flex;
+        background-color: var(--Lightblue);
+        border-radius: 10px;
+        font-size: 15px;
+        color: var(--Coolgray);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 5%;
+        padding-right: 0%;
+    }
+    .one{
+        /* margin-left: 5%;
+        margin-right: 30px;
+        color: var(--Marineblue); */
+        margin-left: auto;
+    }
+    #bill-button{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    .switch{
+        width: 45px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .two{
+        margin-right: auto
+    }
+    .button2{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nextbtn2{
+        margin-right: 0;
+    }
+}
